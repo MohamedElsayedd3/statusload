@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | Privacy Policy - StatusLoad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A7C66;
+            --primary-dark: #005144;
+            --primary-light: #C9F4E9;
+            --bg: #F4FBF8;
+            --card-bg: #FFFFFF;
+            --text-main: #161D1B;
+            --text-muted: #52605C;
+            --border: #DAE5E0;
+            --radius: 16px;
+        }
 
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #7DDAC5;
+                --primary-dark: #00382E;
+                --primary-light: #005144;
+                --bg: #0E1513;
+                --card-bg: #161D1B;
+                --text-main: #DDE4E1;
+                --text-muted: #9EABA7;
+                --border: #252B29;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 24px 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            margin-bottom: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .app-badge {
+                color: #99F7E1;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .date-badge {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .lang-btn {
+            background: var(--bg);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 8px 0;
+        }
+
+        li {
+            position: relative;
+            padding-right: 22px;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+
+        [dir="ltr"] li {
+            padding-right: 0;
+            padding-left: 22px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            right: 4px;
+            color: var(--primary);
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        [dir="ltr"] li::before {
+            right: auto;
+            left: 4px;
+        }
+
+        .highlight-box {
+            background: var(--bg);
+            border-right: 4px solid var(--primary);
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin: 14px 0;
+        }
+
+        [dir="ltr"] .highlight-box {
+            border-right: none;
+            border-left: 4px solid var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 32px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="app-badge">StatusLoad</span>
+        <h1 id="main-title">سياسة الخصوصية</h1>
+        <div class="date-badge" id="update-date">آخر تحديث: نوفمبر 2026</div>
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-ar" onclick="switchLang('ar')">العربية</button>
+            <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
+        </div>
+    </header>
+
+    <!-- SECTION ARABIC -->
+    <div id="content-ar">
+        <div class="card">
+            <h2>1. مقدمة والتزام بالخصوصية</h2>
+            <p>نحن في تطبيق <strong>StatusLoad</strong> نعتبر حماية خصوصيتك وأمان بياناتك الرقمية أولوية قصوى ومطلقة. تم تطوير هذا التطبيق ليعمل وفق أعلى معايير الشفافية والأمان، لتمكينك من حفظ ومشاركة حالات WhatsApp بسهولة وموثوقية ودون أي انتهاك لخصوصيتك.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. الوصول إلى الوسائط والتخزين المحلي</h2>
+            <p>يطلب التطبيق أذونات الوصول إلى وسائط التخزين ومجلد حالات WhatsApp لأداء وظيفة أساسية ومحددة فقط:</p>
+            <ul>
+                <li>استعراض وتصفح حالات الصور ومقاطع الفيديو التي قمت بمشاهدتها على جهازك.</li>
+                <li>حفظ الحالات التي تختارها في المعرض المحلي بهاتفك داخل ألبوم مخصص يحمل اسم <code>StatusLoad</code>.</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>ملاحظة هامة:</strong> التطبيق لا يُجري أي تعديل أو مساس بحسابك على WhatsApp ولا يتطلب تسجيل أي بيانات دخول.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. عدم جمع أو رفع البيانات الشخصية (معالجة محلية 100%)</h2>
+            <p>جميع العمليات التي يقوم بها تطبيق <strong>StatusLoad</strong> (قراءة الحالات، تشغيل الفيديو، حفظ الوسائط، وحذفها) تتم <strong>محلياً بنسبة 100% داخل جهازك</strong> دون مغادرته.</p>
+            <ul>
+                <li>نحن <strong>لا نجمع</strong> ولا نسجل أي معلومات شخصية كاسمك، أو رقم هاتفك، أو قائمة جهات الاتصال الخاصة بك.</li>
+                <li>نحن <strong>لا نرفع</strong> أي صورة أو مقطع فيديو أو محادثة لأي خادم سحابي أو قاعدة بيانات خارجية إطلاقاً.</li>
+                <li>لا يتم بيع أو مشاركة بياناتك مع أي شركات أو أطراف خارجية على الإطلاق.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. خدمات الطرف الثالث والإعلانات (Google AdMob)</h2>
+            <p>يعتمد التطبيق على شبكة إعلانات <strong>Google AdMob</strong> الرسمية لعرض الإعلانات (إعلانات البانر والإعلانات البينية لدعم استمرار تطوير التطبيق مجاناً):</p>
+            <ul>
+                <li>قد تجمع Google معرّف الإعلانات المجهول الخاص بجهازك (Advertising ID) وبعض المعلومات التقنية العامة (مثل نوع الجهاز وإصدار النظام) لعرض إعلانات مناسبة.</li>
+                <li>تخضع معالجة هذه البيانات لسياسة خصوصية Google المعتمدة، والتي يمكنك الاطلاع عليها من خلال: 
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">سياسة خصوصية Google</a>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>5. الأذونات التي يطلبها التطبيق وتبريرها</h2>
+            <ul>
+                <li><strong>إذن قراءة الوسائط والتخزين (Storage / Media Access):</strong> ضروري حصراً لقراءة ملفات الحالات من مسارها المؤقت وحفظ النسخ المطلوبة في معرض الهاتف.</li>
+                <li><strong>إذن إدارة التخزين الخارجي (MANAGE_EXTERNAL_STORAGE):</strong> قد يُطلب على إصدارات أندرويد 11 فما فوق للوصول إلى مجلد <code>Android/media/com.whatsapp</code> لنظام التخزين المقيد (Scoped Storage).</li>
+                <li><strong>إذن الاتصال بالإنترنت (INTERNET):</strong> يُستخدم حصراً بواسطة خدمات Google AdMob لجلب الإعلانات وعرضها.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. تحكم المستخدم وحذف الملفات</h2>
+            <p>أنت صاحب القرار والمتحكم الوحيد والكامل في جميع ملفاتك المحفوظة:</p>
+            <ul>
+                <li>يمكنك حذف أي حالة قمت بحفظها في أي وقت مباشرة من خلال شاشة المحفوظات داخل التطبيق.</li>
+                <li>يمكنك أيضاً حذف الملفات من تطبيق معرض الصور الخاص بهاتفك مباشرة دون أي عوائق.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>7. التغييرات على هذه السياسة والتواصل</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من حين لآخر لمواكبة التحديثات التقنية أو التنظيمية. في حال وجود أي استفسار أو اقتراح، يمكنك التواصل معنا مباشرة من خلال القنوات الرسمية المتاحة داخل صفحة الإعدادات في التطبيق.</p>
+        </div>
+    </div>
+
+    <!-- SECTION ENGLISH -->
+    <div id="content-en" class="hidden" dir="ltr">
+        <div class="card">
+            <h2>1. Introduction &amp; Commitment</h2>
+            <p>At <strong>StatusLoad</strong>, safeguarding your privacy and data security is our highest priority. This Privacy Policy describes how our application handles permissions, files, and third-party services in complete transparency.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Local Media &amp; Storage Access</h2>
+            <p>StatusLoad requests access to your device's local storage and WhatsApp status folders solely to provide its primary features:</p>
+            <ul>
+                <li>Discovering and previewing status images and videos that you have viewed on your phone.</li>
+                <li>Saving the statuses you select into your device’s local gallery under the designated album titled <code>StatusLoad</code>.</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Important Notice:</strong> StatusLoad is an independent utility. It does not alter your WhatsApp account, nor does it require login credentials.
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Zero Data Collection (100% On-Device Processing)</h2>
+            <p>All core operations—reading, previewing, playing, saving, and deleting media files—are executed <strong>100% locally on your device</strong>.</p>
+            <ul>
+                <li>We <strong>do not collect</strong> or store any personally identifiable information such as names, phone numbers, or contacts.</li>
+                <li>We <strong>never upload</strong>, transmit, or back up your photos, videos, or chats to external servers or cloud repositories.</li>
+                <li>We do not sell, rent, or distribute your private files or usage information to any third parties.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Third-Party Services &amp; Advertisements (Google AdMob)</h2>
+            <p>StatusLoad is ad-supported and uses <strong>Google AdMob</strong> to serve banner and interstitial ads:</p>
+            <ul>
+                <li>Google AdMob may collect and process device identifiers (such as Android Advertising ID), general technical data, and coarse diagnostics to serve personalized or non-personalized advertisements.</li>
+                <li>For complete details on how Google processes ad data, please review the 
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">Google Privacy Policy</a>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>5. App Permissions &amp; Purposes</h2>
+            <ul>
+                <li><strong>Storage / Media Permissions:</strong> Required to locate WhatsApp status files on disk and save requested items to your phone gallery.</li>
+                <li><strong>Manage External Storage (MANAGE_EXTERNAL_STORAGE):</strong> Used optionally on Android 11+ to access Scoped Storage folders such as <code>Android/media/com.whatsapp</code>.</li>
+                <li><strong>Internet Permission:</strong> Exclusively utilized by Google Mobile Ads SDK to fetch and deliver ads.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. User Control &amp; Data Deletion</h2>
+            <p>You maintain full ownership and control over all downloaded content. You can delete any saved status file directly within the app's "Saved" tab or via your device's built-in file manager and gallery at any time.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Policy Updates &amp; Contact</h2>
+            <p>We may update this Privacy Policy periodically. If you have any inquiries, suggestions, or concerns regarding your privacy, feel free to reach out to us through our official links provided in the app’s Settings.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 StatusLoad. All rights reserved. | جميع الحقوق محفوظة.
+    </footer>
+</div>
+
+<script>
+    function switchLang(lang) {
+        const arContent = document.getElementById('content-ar');
+        const enContent = document.getElementById('content-en');
+        const btnAr = document.getElementById('btn-ar');
+        const btnEn = document.getElementById('btn-en');
+        const mainTitle = document.getElementById('main-title');
+        const updateDate = document.getElementById('update-date');
+
+        if (lang === 'ar') {
+            arContent.classList.remove('hidden');
+            enContent.classList.add('hidden');
+            btnAr.classList.add('active');
+            btnEn.classList.remove('active');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.documentElement.setAttribute('lang', 'ar');
+            mainTitle.textContent = 'سياسة الخصوصية';
+            updateDate.textContent = 'آخر تحديث: نوفمبر 2026';
+        } else {
+            arContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            btnAr.classList.remove('active');
+            btnEn.classList.add('active');
+            document.documentElement.setAttribute('dir', 'ltr');
+            document.documentElement.setAttribute('lang', 'en');
+            mainTitle.textContent = 'Privacy Policy';
+            updateDate.textContent = 'Last updated: November 2026';
+        }
+    }
+</script>
+
+</body>
+</html>
